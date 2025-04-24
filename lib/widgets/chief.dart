@@ -53,11 +53,7 @@ Widget reviews({
               ],
             ),
           ),
-
         ),
-        Container(
-          
-        )
       ],
     ),
   );
