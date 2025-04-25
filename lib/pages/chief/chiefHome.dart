@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class Chiefhome extends StatefulWidget {
@@ -127,6 +128,101 @@ class _ChiefhomeState extends State<Chiefhome> {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.all(20),
+                height: 250,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.amber.shade100,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Header row
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Total Revenue",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 1, color: Colors.black38),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Row(
+                            children: [
+                              Text("Daily"),
+                              Icon(Icons.arrow_drop_down),
+                            ],
+                          ),
+                        ),
+                        Text(
+                          "See Details",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+
+                    // Revenue amount
+                    Text(
+                      "\$2,241",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+
+                    // Chart
+                    Expanded(
+                      child: LineChart(
+                        LineChartData(
+                          lineBarsData: [
+                            LineChartBarData(
+                              spots: [
+                                FlSpot(0, 1),
+                                FlSpot(1, 1.5),
+                                FlSpot(2, 1.4),
+                                FlSpot(3, 3.4),
+                                FlSpot(4, 2),
+                                FlSpot(5, 2.2),
+                                FlSpot(6, 1.8),
+                              ],
+                              isCurved: true,
+                              color: Colors.orange,
+                              barWidth: 3,
+                              belowBarData: BarAreaData(show: false),
+                              dotData: FlDotData(show: true),
+                            ),
+                          ],
+                          titlesData: FlTitlesData(
+                            leftTitles: AxisTitles(
+                              sideTitles: SideTitles(showTitles: false),
+                            ),
+                            bottomTitles: AxisTitles(
+                              sideTitles: SideTitles(showTitles: true),
+                            ),
+                          ),
+                          gridData: FlGridData(show: false),
+                          borderData: FlBorderData(show: false),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
