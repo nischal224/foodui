@@ -1,5 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_text_field.dart';
+import 'package:lucide_icons_flutter/test_icons.dart';
 
 class Chiefhome extends StatefulWidget {
   const Chiefhome({super.key});
@@ -187,38 +189,110 @@ class _ChiefhomeState extends State<Chiefhome> {
                     SizedBox(height: 10),
 
                     // Chart
-                    Expanded(
-                      child: LineChart(
-                        LineChartData(
-                          lineBarsData: [
-                            LineChartBarData(
-                              spots: [
-                                FlSpot(0, 1),
-                                FlSpot(1, 1.5),
-                                FlSpot(2, 1.4),
-                                FlSpot(3, 3.4),
-                                FlSpot(4, 2),
-                                FlSpot(5, 2.2),
-                                FlSpot(6, 1.8),
-                              ],
-                              isCurved: true,
-                              color: Colors.orange,
-                              barWidth: 3,
-                              belowBarData: BarAreaData(show: false),
-                              dotData: FlDotData(show: true),
-                            ),
-                          ],
-                          titlesData: FlTitlesData(
-                            leftTitles: AxisTitles(
-                              sideTitles: SideTitles(showTitles: false),
-                            ),
-                            bottomTitles: AxisTitles(
-                              sideTitles: SideTitles(showTitles: true),
-                            ),
-                          ),
-                          gridData: FlGridData(show: false),
-                          borderData: FlBorderData(show: false),
+                    Expanded(child: barChart()),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.all(25),
+                decoration: BoxDecoration(
+                  color: Colors.white70,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Reviews",
+                          style: TextStyle(fontWeight: FontWeight.bold),
                         ),
+                        Text(
+                          "See All Reviews",
+                          style: TextStyle(
+                            color: Colors.orange.shade900,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.orange.shade900,
+                            decorationStyle: TextDecorationStyle.double,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(Icons.star, color: Colors.orangeAccent.shade700),
+                        Text(
+                          "4.9",
+                          style: TextStyle(
+                            color: Colors.orangeAccent.shade700,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          "Total 20 Reviews",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 15),
+                    Container(
+                      padding: EdgeInsets.all(25),
+                      decoration: BoxDecoration(
+                        color: Colors.white70,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Populer Items This Weeks",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              Text(
+                                "See All",
+                                style: TextStyle(
+                                  color: Colors.orange.shade900,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.orange.shade900,
+                                  decorationStyle: TextDecorationStyle.double,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 15),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15),
+                                  child: Image.network(
+                                    'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 15),
+                              Expanded(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15),
+                                  child: Image.network(
+                                    'https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ],

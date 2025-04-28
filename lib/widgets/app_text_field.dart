@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class Appwidget {
@@ -430,5 +431,205 @@ Widget deliveryAddress() {
         ),
       ],
     ),
+  );
+}
+
+Widget barChart() {
+  return LineChart(
+    LineChartData(
+      backgroundColor: Colors.white,
+      minX: 0,
+      maxX: 7,
+      minY: 0,
+      maxY: 1000,
+      titlesData: LineTitles.getTitleData(),
+      gridData: FlGridData(show: true),
+      borderData: FlBorderData(show: true),
+      lineBarsData: [
+        LineChartBarData(
+          spots: [
+            FlSpot(0, 500),
+            FlSpot(2.6, 600),
+            FlSpot(4.9, 700),
+            FlSpot(6.8, 800),
+          ],
+          isCurved: true,
+          barWidth: 5,
+          dotData: FlDotData(show: false),
+          gradient: LinearGradient(
+            colors: [Colors.red, Colors.white],
+            begin: Alignment.bottomRight,
+            end: Alignment.bottomLeft,
+          ),
+          belowBarData: BarAreaData(
+            show: true,
+            color: Colors.red.withAlpha(150),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+class LineTitles {
+  static FlTitlesData getTitleData() {
+    return FlTitlesData(
+      bottomTitles: AxisTitles(
+        sideTitles: SideTitles(
+          showTitles: true,
+          interval: 1,
+          getTitlesWidget: (value, meta) {
+            const timeLabels = {
+              0: '10 AM',
+              1: '11 AM',
+              2: '12 PM',
+              3: '1 PM',
+              4: '2 PM',
+              5: '3 PM',
+              6: '4 PM',
+            };
+
+            return Padding(
+              padding: EdgeInsets.only(top: 8),
+              child: Text(
+                timeLabels[value.toInt()] ?? '',
+                style: TextStyle(fontSize: 10),
+              ),
+            );
+          },
+        ),
+      ),
+      leftTitles: AxisTitles(
+        sideTitles: SideTitles(
+          showTitles: false,
+          interval: 1,
+          reservedSize: 40,
+          getTitlesWidget: (value, meta) {
+            const timeLabels = {1: '500', 2: '600', 3: '750', 4: '700'};
+
+            return Text(
+              timeLabels[value.toInt()] ?? '',
+              style: TextStyle(fontSize: 10),
+            );
+          },
+        ),
+      ),
+
+      topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+      rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+    );
+  }
+}
+
+Widget notification({
+  required String ppimage,
+  required String boldtext,
+  required String subtext,
+  required String time,
+  required String imageurl,
+}) {
+  return ListView(
+    shrinkWrap: true,
+    children: [
+      ListTile(
+        leading: ClipRRect(
+          borderRadius: BorderRadius.circular(50),
+          child: Image.network(
+            ppimage,
+            fit: BoxFit.cover,
+            height: 50,
+            width: 50,
+          ),
+        ),
+        title: RichText(
+          text: TextSpan(
+            text: boldtext,
+            style: TextStyle(fontWeight: FontWeight.bold),
+            children: [
+              TextSpan(
+                text: subtext,
+                style: TextStyle(color: Colors.blueGrey.shade400),
+              ),
+            ],
+          ),
+        ),
+        subtitle: Text(time),
+        trailing: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: Image.network(imageurl),
+        ),
+      ),
+    ],
+  );
+}
+
+Widget message({
+  required String profile,
+  required String titleText,
+  required String subtitle,
+  required String time,
+  required String num,
+}) {
+  return ListView(
+    shrinkWrap: true,
+
+    children: [
+      ListTile(
+        leading: Stack(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Image.network(
+                profile,
+                fit: BoxFit.cover,
+                height: 50,
+                width: 50,
+              ),
+            ),
+            Positioned(
+              right: 5,
+              bottom: 0,
+              child: Container(
+                height: 12,
+                width: 12,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(50),
+                ),
+              ),
+            ),
+          ],
+        ),
+        title: Text(
+          titleText,
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+        ),
+        subtitle: Text(
+          subtitle,
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        ),
+        trailing: Column(
+          children: [
+            Text(
+              time,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+            ),
+            Container(
+              alignment: Alignment.center,
+              height: 30,
+              width: 30,
+              decoration: BoxDecoration(
+                color: Colors.deepOrangeAccent,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Text(
+                num,
+                style: TextStyle(color: Colors.white, fontSize: 15),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ],
   );
 }
