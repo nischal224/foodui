@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodui/widgets/app_text_field.dart';
 
 class Additems extends StatefulWidget {
   const Additems({super.key});
@@ -35,7 +34,7 @@ class _AdditemsState extends State<Additems> {
               ),
             ),
           ),
-          SizedBox(width: 10), 
+          SizedBox(width: 10),
           Container(
             height: 150,
             width: 150,
@@ -61,8 +60,7 @@ class _AdditemsState extends State<Additems> {
               ],
             ),
           ),
-          SizedBox(width: 10), // Add space between containers
-          // Another Add Photo Container
+          SizedBox(width: 10),
           Container(
             height: 150,
             width: 150,

@@ -633,3 +633,143 @@ Widget message({
     ],
   );
 }
+
+Widget ongoing({
+  required String name,
+  required String? status,
+  required String photo,
+  required String title,
+  required String orderNo,
+  required String price,
+  required String? dateTime,
+  required String numItems,
+  required String rate,
+  required String reorder,
+}) {
+  return ListView(
+    scrollDirection: Axis.vertical,
+    shrinkWrap: true,
+    children: [
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(name, style: Appwidget.boldtext()),
+              SizedBox(width: 15),
+              Text(
+                status!,
+                textAlign: TextAlign.end,
+                style: TextStyle(
+                  color: Colors.green.shade800,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ],
+          ),
+          Divider(height: 20, thickness: 1),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.network(
+                  photo,
+                  height: 100,
+                  width: 80,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            title,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          orderNo,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Text(price, style: TextStyle(fontSize: 16)),
+                        SizedBox(width: 55),
+                        Row(
+                          children: [
+                            Text(
+                              dateTime!,
+                              style: TextStyle(
+                                color: Colors.black45,
+                                fontSize: 14,
+                              ),
+                            ),
+                            SizedBox(width: 15),
+                            Text(
+                              numItems,
+                              style: TextStyle(
+                                color: Colors.black45,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 25),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+
+                  height: 50,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.deepOrange.shade700),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+
+                  child: Text(rate, style: TextStyle(color: Colors.deepOrange)),
+                ),
+              ),
+              SizedBox(width: 100),
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  height: 50,
+
+                  child: Text(reorder, style: TextStyle(color: Colors.white)),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ],
+  );
+}

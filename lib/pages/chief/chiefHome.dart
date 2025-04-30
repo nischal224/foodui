@@ -57,7 +57,7 @@ class _ChiefhomeState extends State<Chiefhome> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Location"),
-                        Container(
+                        SizedBox(
                           width: 150,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
