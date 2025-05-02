@@ -14,7 +14,6 @@ class _MyOrdersState extends State<MyOrders> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
   }
@@ -69,7 +68,6 @@ class _MyOrdersState extends State<MyOrders> with TickerProviderStateMixin {
                   controller: _tabController,
                   physics: ScrollPhysics(),
                   children: [
-                   
                     ListView(
                       padding: EdgeInsets.zero,
                       children: [
