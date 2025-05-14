@@ -1,109 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-
-class Appwidget {
-  static BuildContext? get context => null;
-
-  static TextStyle boldTextFeildStyle() {
-    return TextStyle(
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-      fontSize: 35,
-    );
-  }
-
-  static TextStyle titleText() {
-    return TextStyle(
-      color: Colors.white,
-      fontWeight: FontWeight.w600,
-      fontSize: 20,
-    );
-  }
-
-  static Container buttomVerification() {
-    return Container(
-      alignment: Alignment.center,
-      width: double.infinity,
-      height: 80,
-      decoration: BoxDecoration(
-        color: Colors.deepOrange,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: Text(
-        "VERIFY",
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w600,
-          fontSize: 18,
-        ),
-      ),
-    );
-  }
-
-  static Container loginButton() {
-    return Container(
-      alignment: Alignment.center,
-      width: double.infinity,
-      height: 50,
-      decoration: BoxDecoration(
-        color: Colors.deepOrange,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: const Text(
-        "LOG IN",
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 18,
-        ),
-      ),
-    );
-  }
-
-  static Container signupBotton() {
-    return Container(
-      alignment: Alignment.center,
-      width: double.infinity,
-      height: 50,
-      decoration: BoxDecoration(
-        color: Colors.deepOrange,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: const Text(
-        "LOG IN",
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 18,
-        ),
-      ),
-    );
-  }
-
-  static Container buttonaccess() {
-    return Container(
-      alignment: Alignment.center,
-      width: double.infinity,
-      height: 50,
-      decoration: BoxDecoration(
-        color: Colors.deepOrange,
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: const Text(
-        "ACCESS LOCATION",
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 18,
-        ),
-      ),
-    );
-  }
-
-  static TextStyle boldtext() {
-    return TextStyle(fontWeight: FontWeight.bold);
-  }
-}
+import 'package:foodui/widgets/app_button.dart';
 
 Widget buildCategoryCard({
   required String label,
@@ -369,7 +266,7 @@ Widget deliveryAddress() {
             ),
           ],
         ),
-        SizedBox(height: 20),
+        Appwidget.sizeheight(),
 
         TextField(
           decoration: InputDecoration(
@@ -706,7 +603,7 @@ Widget ongoing({
                         ),
                       ],
                     ),
-                    SizedBox(height: 10),
+                    Appwidget.sizeheight(),
                     Row(
                       children: [
                         Text(price, style: TextStyle(fontSize: 16)),
@@ -737,7 +634,7 @@ Widget ongoing({
               ),
             ],
           ),
-          SizedBox(height: 25),
+          Appwidget.sizeheight(),
           Row(
             children: [
               Expanded(

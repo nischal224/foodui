@@ -1,7 +1,6 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_button.dart';
 import 'package:foodui/widgets/app_text_field.dart';
-import 'package:lucide_icons_flutter/test_icons.dart';
 
 class Chiefhome extends StatefulWidget {
   const Chiefhome({super.key});
@@ -11,6 +10,7 @@ class Chiefhome extends StatefulWidget {
 }
 
 class _ChiefhomeState extends State<Chiefhome> {
+  int current = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +27,12 @@ class _ChiefhomeState extends State<Chiefhome> {
             label: 'shoppng',
           ),
         ],
-        currentIndex: 0,
-        onTap: (value) {},
+        currentIndex: current,
+        onTap: (value) {
+          current = value;
+          setState(() {});
+        },
+
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.red,
       ),
@@ -73,7 +77,7 @@ class _ChiefhomeState extends State<Chiefhome> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50),
                     child: Image.network(
-                      'https://scontent.fktm21-1.fna.fbcdn.net/v/t39.30808-6/487315180_3007083586108364_4876919458221114847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=C5MlmmBH6qQQ7kNvwH0vc9O&_nc_oc=AdmO8mB1TUMv2IjqoKTWH0gbru2ydyL8SSPVfLWs2jUTORyL7cIebaKdkOb77jWjyjg&_nc_zt=23&_nc_ht=scontent.fktm21-1.fna&_nc_gid=Xo6mwhimjCD8AdjQc2KepA&oh=00_AfF9yWehxck-kM3lk5-Mt9o6cp2y-a3EkamOJF99yLp0Cw&oe=680C007F',
+                      'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=600',
                       fit: BoxFit.cover,
                       height: 70,
                       width: 70,
@@ -81,7 +85,7 @@ class _ChiefhomeState extends State<Chiefhome> {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+
               Row(
                 children: [
                   Expanded(
@@ -193,7 +197,7 @@ class _ChiefhomeState extends State<Chiefhome> {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              Appwidget.sizeheight(),
               Container(
                 padding: EdgeInsets.all(25),
                 decoration: BoxDecoration(
@@ -238,7 +242,7 @@ class _ChiefhomeState extends State<Chiefhome> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 15),
+                    Appwidget.sizeheight(),
                     Container(
                       padding: EdgeInsets.all(25),
                       decoration: BoxDecoration(
@@ -246,16 +250,14 @@ class _ChiefhomeState extends State<Chiefhome> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "Populer Items This Weeks",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                ),
+                                style: Appwidget.boldTextFeildStyle(),
                               ),
                               Text(
                                 "See All",
@@ -268,7 +270,7 @@ class _ChiefhomeState extends State<Chiefhome> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 15),
+                          Appwidget.sizeheight(),
                           Row(
                             children: [
                               Expanded(
@@ -280,13 +282,13 @@ class _ChiefhomeState extends State<Chiefhome> {
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 15),
+                              SizedBox(width: 5),
                               Expanded(
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
                                   child: Image.network(
                                     'https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=600',
-                                    fit: BoxFit.contain,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodui/pages/searchpage.dart';
-import 'package:foodui/pages/splash.dart';
-import 'package:http/http.dart' as http;
+import 'package:foodui/pages/burger.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Searchpage()));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Burger()));
 }

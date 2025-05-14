@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_button.dart';
 
 class Myprofile extends StatefulWidget {
   const Myprofile({super.key});
@@ -74,7 +75,8 @@ class _MyprofileState extends State<Myprofile> {
                 ],
               ),
             ),
-            SizedBox(height: 25),
+            Appwidget.sizeheight(),
+
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: ListView(
@@ -104,7 +106,8 @@ class _MyprofileState extends State<Myprofile> {
                           ),
                           trailing: Icon(Icons.arrow_forward_ios_sharp),
                         ),
-                        SizedBox(height: 10),
+                        Appwidget.sizeheight(),
+
                         ListTile(
                           title: Text("Settings"),
                           leading: Container(
@@ -124,7 +127,7 @@ class _MyprofileState extends State<Myprofile> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  Appwidget.sizeheight(),
 
                   Container(
                     padding: EdgeInsets.all(20),
@@ -150,7 +153,8 @@ class _MyprofileState extends State<Myprofile> {
                           ),
                           trailing: Icon(Icons.arrow_forward_ios_sharp),
                         ),
-                        SizedBox(height: 10),
+                        Appwidget.sizeheight(),
+
                         ListTile(
                           title: Text("Number of Orders"),
                           leading: Container(
@@ -177,7 +181,7 @@ class _MyprofileState extends State<Myprofile> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  Appwidget.sizeheight(),
 
                   Container(
                     padding: EdgeInsets.all(20),
@@ -206,7 +210,8 @@ class _MyprofileState extends State<Myprofile> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  Appwidget.sizeheight(),
+
                   Container(
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(

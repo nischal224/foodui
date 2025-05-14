@@ -1,10 +1,13 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:foodui/widgets/app_button.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
 class TapToRouteMap extends StatefulWidget {
+  const TapToRouteMap({super.key});
+
   @override
   _TapToRouteMapState createState() => _TapToRouteMapState();
 }
@@ -48,8 +51,6 @@ class _TapToRouteMapState extends State<TapToRouteMap>
         duration = props['duration'] / 60;
         routePoints =
             coords.map((c) => LatLng(c[1] as double, c[0] as double)).toList();
-
-        // If route points are available, fit camera bounds to the route
       });
     } else {
       print("Error: ${response.body}");
@@ -80,10 +81,9 @@ class _TapToRouteMapState extends State<TapToRouteMap>
     return Scaffold(
       body: Column(
         children: [
-          // Map expands to fill available space
           Expanded(
             child: FlutterMap(
-              mapController: mapController, // Add the map controller here
+              mapController: mapController,
               options: MapOptions(
                 initialCenter: LatLng(27.700769, 85.300140),
                 initialZoom: 12,
@@ -157,7 +157,7 @@ class _TapToRouteMapState extends State<TapToRouteMap>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Address"),
-                  SizedBox(height: 6),
+                  Appwidget.sizeheight(),
 
                   TextField(
                     decoration: InputDecoration(
@@ -171,7 +171,7 @@ class _TapToRouteMapState extends State<TapToRouteMap>
                       ),
                     ),
                   ),
-                  SizedBox(height: 6),
+                  Appwidget.sizeheight(),
                   Row(
                     children: [
                       Expanded(
@@ -179,7 +179,7 @@ class _TapToRouteMapState extends State<TapToRouteMap>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("STREET"),
-                            SizedBox(height: 6),
+                            Appwidget.sizeheight(),
                             TextField(
                               decoration: InputDecoration(
                                 filled: true,
@@ -200,6 +200,7 @@ class _TapToRouteMapState extends State<TapToRouteMap>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("POST CODE"),
+                            Appwidget.sizeheight(),
                             TextField(
                               decoration: InputDecoration(
                                 filled: true,
@@ -216,10 +217,10 @@ class _TapToRouteMapState extends State<TapToRouteMap>
                       ),
                     ],
                   ),
-                  SizedBox(height: 6),
+                  Appwidget.sizeheight(),
 
                   Text("APPARTMENT"),
-                  SizedBox(height: 6),
+                  Appwidget.sizeheight(),
 
                   TextField(
                     decoration: InputDecoration(
@@ -232,10 +233,10 @@ class _TapToRouteMapState extends State<TapToRouteMap>
                       ),
                     ),
                   ),
-                  SizedBox(height: 6),
+                  Appwidget.sizeheight(),
 
                   Text("LABEL AS"),
-                  SizedBox(height: 6),
+                  Appwidget.sizeheight(),
 
                   Row(
                     children: [
@@ -280,7 +281,7 @@ class _TapToRouteMapState extends State<TapToRouteMap>
                       ),
                     ],
                   ),
-                  SizedBox(height: 6),
+                  Appwidget.sizeheight(),
                   Container(
                     alignment: Alignment.center,
                     height: 50,

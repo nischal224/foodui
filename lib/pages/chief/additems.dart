@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_button.dart';
 
 class Additems extends StatefulWidget {
   const Additems({super.key});
@@ -14,9 +15,8 @@ class _AdditemsState extends State<Additems> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start, // Align items to start
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          // Image Container
           Container(
             width: 150,
             height: 150,
@@ -28,9 +28,9 @@ class _AdditemsState extends State<Additems> {
               borderRadius: BorderRadius.circular(15),
               child: Image.network(
                 'https://images.pexels.com/photos/1633525/pexels-photo-1633525.jpeg?auto=compress&cs=tinysrgb&w=300',
-                fit: BoxFit.cover, // Ensure image covers the container space
-                height: double.infinity, // Use full container height
-                width: double.infinity, // Use full container width
+                fit: BoxFit.cover,
+                height: double.infinity,
+                width: double.infinity,
               ),
             ),
           ),
@@ -116,8 +116,8 @@ class _AdditemsState extends State<Additems> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 25),
-              Text("ITEM NAME", style: TextStyle(fontWeight: FontWeight.bold)),
+              Appwidget.sizeheight(),
+              Text("ITEM NAME", style: Appwidget.headerBold()),
               SizedBox(height: 10),
               TextFormField(
                 decoration: InputDecoration(
@@ -128,19 +128,15 @@ class _AdditemsState extends State<Additems> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
-              Text(
-                "UPLOAD PHOTO/VIDEO",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 15),
+              Appwidget.sizeheight(),
+              Text("UPLOAD PHOTO/VIDEO", style: Appwidget.headerBold()),
+              Appwidget.sizeheight(),
               uploadPhotoVideo(),
-              SizedBox(height: 25),
-              Text("PRICE"),
+              Appwidget.sizeheight(),
+              Text("PRICE", style: Appwidget.headerBold()),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Price TextField
                   Expanded(
                     child: TextFormField(
                       decoration: InputDecoration(
@@ -161,7 +157,7 @@ class _AdditemsState extends State<Additems> {
                           });
                         },
                       ),
-                      Text("pick up"),
+                      Text("pick up", style: Appwidget.subheader()),
                     ],
                   ),
                   SizedBox(width: 10),
@@ -179,28 +175,28 @@ class _AdditemsState extends State<Additems> {
                           side: BorderSide(color: Colors.deepOrange),
                           checkColor: Colors.deepOrange,
                         ),
-                        Text('Delivery'),
+                        Text('Delivery', style: Appwidget.subheader()),
                       ],
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 15),
-              Text("INGRIDENTS"),
+              Appwidget.sizeheight(),
+              Text("INGRIDENTS", style: Appwidget.headerBold()),
               SizedBox(height: 15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Basic"),
+                  Text("Basic", style: Appwidget.subheader()),
                   Row(
                     children: [
-                      Text("See All"),
+                      Text("See All", style: Appwidget.subheader()),
                       Icon(Icons.arrow_drop_down_rounded),
                     ],
                   ),
                 ],
               ),
-              SizedBox(height: 15),
+              Appwidget.sizeheight(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -290,7 +286,7 @@ class _AdditemsState extends State<Additems> {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
               Container(
                 alignment: Alignment.center,
                 height: 50,

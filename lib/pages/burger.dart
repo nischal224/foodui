@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_button.dart';
 import 'package:foodui/widgets/app_text_field.dart';
 
 class Burger extends StatefulWidget {
@@ -62,14 +63,14 @@ class _BurgerState extends State<Burger> {
                 ],
               ),
             ),
-            SizedBox(height: 15),
+            Appwidget.sizeheight(),
             Padding(
               padding: const EdgeInsets.all(25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Burger Bistro", style: Appwidget.boldtext()),
-                  SizedBox(height: 5),
+                  Appwidget.sizeheight(),
                   SizedBox(
                     height: 20,
                     width: 120,
@@ -81,9 +82,9 @@ class _BurgerState extends State<Burger> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 15),
+                  Appwidget.sizeheight(),
                   SizedBox(
-                    width: 300,
+                    width: 250,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -123,13 +124,13 @@ class _BurgerState extends State<Burger> {
                   Text(
                     "Moecenas sed diam eget risus varius blandit sit\namet non magns. Integer posuere erat a ante\nvanenatis dapibus posuere velit aliquet.",
                   ),
-                  SizedBox(height: 15),
+                  Appwidget.sizeheight(),
                   SizedBox(
                     width: 250,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("SIZE:"),
+                        Text("SIZE:", style: Appwidget.boldtext()),
                         Container(
                           alignment: Alignment.center,
                           width: 50,
@@ -163,7 +164,7 @@ class _BurgerState extends State<Burger> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  Appwidget.sizeheight(),
                   Text("INGRIDENTS", style: Appwidget.boldtext()),
                   SizedBox(height: 15),
                   Row(
@@ -224,7 +225,7 @@ class _BurgerState extends State<Burger> {
                 ],
               ),
             ),
-            SizedBox(height: 15),
+            Appwidget.sizeheight(),
             Container(
               padding: EdgeInsets.all(25),
               width: double.infinity,
@@ -243,10 +244,7 @@ class _BurgerState extends State<Burger> {
                     children: [
                       Text(
                         price.toString(),
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Appwidget.boldTextFeildStyle(),
                       ),
                       Container(
                         width: 130,
@@ -307,7 +305,7 @@ class _BurgerState extends State<Burger> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  Appwidget.sizeheight(),
                   Container(
                     alignment: Alignment.center,
                     height: 50,

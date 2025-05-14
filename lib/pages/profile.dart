@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/map/taptoroutemap.dart';
 import 'package:foodui/pages/cart.dart';
 import 'package:foodui/pages/login.dart';
 import 'package:foodui/pages/personalInfo.dart';
@@ -127,7 +128,12 @@ class Profile extends StatelessWidget {
                   title: Text("Addresses"),
                   trailing: Icon(Icons.arrow_right_sharp),
 
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TapToRouteMap()),
+                    );
+                  },
                 ),
               ],
             ),

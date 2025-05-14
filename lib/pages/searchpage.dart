@@ -263,7 +263,7 @@ class _SearchpageState extends State<Searchpage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 100,
                     child: Column(
                       children: [
