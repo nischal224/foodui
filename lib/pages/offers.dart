@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_button.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 class Offers extends StatefulWidget {
@@ -36,7 +37,7 @@ class _OffersState extends State<Offers> {
                       fontSize: 35,
                     ),
                   ),
-                  SizedBox(height: 35),
+                  Appwidget.sizeheight(),
                   Text(
                     "#1243CD2",
                     style: TextStyle(
@@ -45,7 +46,7 @@ class _OffersState extends State<Offers> {
                       fontSize: 22,
                     ),
                   ),
-                  SizedBox(height: 35),
+                  Appwidget.sizeheight(),
 
                   Text(
                     "#Use the cupon get 25% discount",
@@ -55,7 +56,7 @@ class _OffersState extends State<Offers> {
                       fontSize: 18,
                     ),
                   ),
-                  SizedBox(height: 25),
+                  Appwidget.sizeheight(),
                   InkWell(
                     borderRadius: BorderRadius.circular(10),
                     onTap: () {

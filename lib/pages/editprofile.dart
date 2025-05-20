@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_button.dart';
 import 'package:foodui/widgets/app_text_field.dart';
 
 class Editprofile extends StatefulWidget {
   const Editprofile({super.key});
-
   @override
   State<Editprofile> createState() => _EditprofileState();
 }
@@ -26,22 +26,20 @@ class _EditprofileState extends State<Editprofile> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Expanded(
-                      flex: 0,
-                      child: Container(
-                        height: 50,
-                        width: 50,
 
-                        decoration: BoxDecoration(
-                          color: Colors.blueGrey.shade400,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: Icon(Icons.arrow_back_ios_new),
+                    child: Container(
+                      height: 50,
+                      width: 50,
+
+                      decoration: BoxDecoration(
+                        color: Colors.blueGrey.shade400,
+                        borderRadius: BorderRadius.circular(50),
                       ),
+                      child: Icon(Icons.arrow_back_ios_new),
                     ),
                   ),
                   SizedBox(width: 15),
-                  Expanded(flex: 6, child: Text("Edit Profile")),
+                  Expanded(child: Text("Edit Profile")),
                 ],
               ),
               Center(
@@ -58,7 +56,7 @@ class _EditprofileState extends State<Editprofile> {
                           clipBehavior: Clip.hardEdge,
                           borderRadius: BorderRadius.circular(50),
                           child: Image.network(
-                            'https://scontent.fktm21-1.fna.fbcdn.net/v/t39.30808-6/487315180_3007083586108364_4876919458221114847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=C5MlmmBH6qQQ7kNvwH0vc9O&_nc_oc=AdmO8mB1TUMv2IjqoKTWH0gbru2ydyL8SSPVfLWs2jUTORyL7cIebaKdkOb77jWjyjg&_nc_zt=23&_nc_ht=scontent.fktm21-1.fna&_nc_gid=Xo6mwhimjCD8AdjQc2KepA&oh=00_AfF9yWehxck-kM3lk5-Mt9o6cp2y-a3EkamOJF99yLp0Cw&oe=680C007F',
+                            'https://images.pexels.com/photos/2829373/pexels-photo-2829373.jpeg?auto=compress&cs=tinysrgb&w=600',
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -80,7 +78,7 @@ class _EditprofileState extends State<Editprofile> {
                   ],
                 ),
               ),
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -98,7 +96,7 @@ class _EditprofileState extends State<Editprofile> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 25),
+                  Appwidget.sizeheight(),
                   Text("EMAIL"),
                   TextFormField(
                     decoration: InputDecoration(
@@ -113,7 +111,7 @@ class _EditprofileState extends State<Editprofile> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 25),
+                  Appwidget.sizeheight(),
                   Text("PHONE NUMBER"),
                   TextFormField(
                     decoration: InputDecoration(
@@ -127,7 +125,7 @@ class _EditprofileState extends State<Editprofile> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 25),
+                  Appwidget.sizeheight(),
                   Text("BIO"),
                   TextFormField(
                     maxLines: 4,
@@ -146,7 +144,7 @@ class _EditprofileState extends State<Editprofile> {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
               saveContainer(
                 name: "SAVE",
                 backgroundColor: Colors.deepOrange,

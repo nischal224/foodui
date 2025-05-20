@@ -22,9 +22,9 @@ class _MapuiState extends State<Mapui> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 2,
             ),
-            SizedBox(height: 50),
+            Appwidget.sizeheight(),
             Appwidget.buttonaccess(),
-            SizedBox(height: 25),
+            Appwidget.sizeheight(),
             RichText(
               text: TextSpan(
                 children: [

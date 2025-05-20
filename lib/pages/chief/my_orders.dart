@@ -61,7 +61,7 @@ class _MyOrdersState extends State<MyOrders> with TickerProviderStateMixin {
                 controller: _tabController,
                 tabs: [Tab(text: "Ongoing"), Tab(text: "History")],
               ),
-              SizedBox(height: 15),
+              Appwidget.sizeheight(),
 
               Expanded(
                 child: TabBarView(

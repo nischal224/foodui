@@ -190,7 +190,7 @@ class _ChiefhomeState extends State<Chiefhome> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    Appwidget.sizeheight(),
 
                     // Chart
                     Expanded(child: barChart()),
@@ -257,7 +257,11 @@ class _ChiefhomeState extends State<Chiefhome> {
                             children: [
                               Text(
                                 "Populer Items This Weeks",
-                                style: Appwidget.boldTextFeildStyle(),
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               Text(
                                 "See All",

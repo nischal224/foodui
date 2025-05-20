@@ -18,6 +18,10 @@ class Appwidget {
     return SizedBox(height: 20);
   }
 
+  static Divider dividerHeight() {
+    return Divider(height: 20);
+  }
+
   static TextStyle boldTextFeildStyle() {
     return TextStyle(
       color: Colors.white,

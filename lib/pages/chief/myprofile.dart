@@ -18,7 +18,6 @@ class _MyprofileState extends State<Myprofile> {
           children: [
             Container(
               padding: EdgeInsets.all(25),
-
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.deepOrange.shade700,

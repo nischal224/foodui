@@ -3,6 +3,7 @@ import 'package:foodui/pages/burger.dart';
 import 'package:foodui/pages/details.dart';
 import 'package:foodui/pages/offers.dart';
 import 'package:foodui/pages/profile.dart';
+import 'package:foodui/widgets/app_button.dart';
 import 'package:foodui/widgets/app_text_field.dart';
 
 final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -159,7 +160,7 @@ class _HomepageState extends State<Homepage> {
                   ],
                 ),
               ),
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
 
               TextField(
                 decoration: InputDecoration(
@@ -172,7 +173,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
               ),
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -199,7 +200,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
               Padding(
                 padding: const EdgeInsets.all(2.0),
                 child: SizedBox(
@@ -269,7 +270,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
 
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -296,7 +297,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              Appwidget.sizeheight(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -304,7 +305,7 @@ class _HomepageState extends State<Homepage> {
                     imageUrl:
                         'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600',
                   ),
-                  SizedBox(height: 10),
+                  Appwidget.sizeheight(),
                   Text(
                     "Rose Garden Restaurant",
                     style: TextStyle(
@@ -314,7 +315,7 @@ class _HomepageState extends State<Homepage> {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 5),
+                  Appwidget.sizeheight(),
                   Text(
                     "Burger - Chicken - Riche - Wings",
                     style: TextStyle(color: Colors.white),
@@ -357,7 +358,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              Appwidget.sizeheight(),
               imageNetwork(
                 imageUrl:
                     'https://images.pexels.com/photos/750073/pexels-photo-750073.jpeg?auto=compress&cs=tinysrgb&w=600',

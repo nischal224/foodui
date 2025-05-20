@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/widgets/app_button.dart';
 import 'package:foodui/widgets/app_text_field.dart';
 
 class Chiefnotifaction extends StatefulWidget {
@@ -54,7 +55,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                   const Text("RESET"),
                 ],
               ),
-              const SizedBox(height: 15),
+              Appwidget.sizeheight(),
 
               TabBar(
                 indicatorColor: Colors.orange,
@@ -80,7 +81,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           imageurl:
                               'https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=600',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                         notification(
                           ppimage:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -90,7 +91,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           imageurl:
                               'https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=600',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                         notification(
                           ppimage:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -100,7 +101,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           imageurl:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                         notification(
                           ppimage:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -110,7 +111,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           imageurl:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                       ],
                     ),
                     Column(
@@ -123,7 +124,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           time: '19:37',
                           num: '1',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                         message(
                           profile:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -132,7 +133,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           time: '19:37',
                           num: '2',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                         message(
                           profile:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -141,7 +142,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           time: '19:37',
                           num: '1',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                         message(
                           profile:
                               'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -150,7 +151,7 @@ class _ChiefnotifactionState extends State<Chiefnotifaction>
                           time: '19:37',
                           num: '3',
                         ),
-                        const Divider(height: 50),
+                        Appwidget.dividerHeight(),
                       ],
                     ),
                   ],
